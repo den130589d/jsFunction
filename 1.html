@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="lib.js"></script>
+</head>
+<body>
+	<script>
+		
+		function sum1 (){
+			var a = getData('Возводимое число');
+			var b = getData('Степень');
+			if(!isNumber(a) || !isNumber(b)){
+				return 'error';
+			}
+			a = toNumber(a);
+			b = toNumber(b);
+			var result = 1;
+			for(var i = 0; i<b; i++){
+				result = result * a
+			}
+			return result;
+			
+		}
+
+		var c = sum1();
+		showData(c);
+
+	</script>
+</body>
+</html>
